@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   odoo:
-    image: odoo:16.0
+    image: odoo:17.0
     ports:
       - "8069:8069"
     environment:
@@ -14,7 +14,7 @@ services:
       - ./custom-addons:/mnt/extra-addons
 
   db:
-    image: postgres:13
+    image: postgres:14
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
